@@ -1,0 +1,34 @@
+{
+  "db": {
+    "database": "queue",
+    "options": {
+      "dialect": "mysql",
+      "port": 3306,
+      "pool": {
+        "max": 50,
+        "min": 0,
+        "idle": 500
+      },
+      "dialectOptions": {
+       "multipleStatements": true
+      },
+      "replication": {
+        "write": {
+          "username": "root",
+          "password": "asdf",
+          "host": "127.0.0.1",
+          "port": 3306
+        },
+        "read": [
+          {
+            "username": "root",
+            "password": "asdf",
+            "host": "127.0.0.1",
+            "port": 3306
+          }
+        ]
+      }
+    }
+  },
+  "timeout" : 1000
+}
